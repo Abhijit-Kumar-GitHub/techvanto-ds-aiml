@@ -6,6 +6,7 @@ Design a Grocery Management System . You can view the item list. add item. Delet
 
 grocery_list = []
 
+
 def display_items():
     if not grocery_list:
         print("The grocery list is empty.")
@@ -14,9 +15,11 @@ def display_items():
         for index, item in enumerate(grocery_list):
             print(f"{index + 1}. {item}")
 
+
 def add_item(item):
     grocery_list.append(item)
     print(f"'{item}' has been added to the grocery list.")
+
 
 def delete_item(item):
     if item in grocery_list:
@@ -25,9 +28,11 @@ def delete_item(item):
     else:
         print(f"'{item}' is not in list")
 
+
 def clear_list():
     grocery_list.clear()
     print("The grocery list has been cleared.")
+
 
 def main():
     while True:
@@ -39,7 +44,6 @@ def main():
         print("5. Exit")
 
         choice = input("Enter your choice (1-5): ")
-
 
         match choice:
             case '1':

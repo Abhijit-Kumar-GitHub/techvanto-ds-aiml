@@ -31,6 +31,19 @@ def range_series(start=1, end=10):
     return pd.Series(np.arange(start, end + 1), name='Range Series')
 
 def main():
+    start = input("Enter start of range (default is 1): ")
+    end = input("Enter end of range (default is 10): ")
+
+    start = int(start) if start else 1
+    end = int(end) if end else 10
+
+    series = range_series(start, end)
+    print("Generated Series:")
+    print(series)
+
+if __name__ == "__main__":
+    main()
+    
     
     
 
